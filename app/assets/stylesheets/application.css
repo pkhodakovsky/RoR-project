@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   /* overflow-y: hidden; */
+ }
+
+ .slider {
+   font-family: sans-serif;
+   scroll-snap-type: x mandatory;
+   display: flex;
+   justify-content: space-between;
+   -webkit-overflow-scrolling: touch;
+   overflow-x: scroll;
+ }
+
+ .section {
+   padding: 1rem;
+   min-width: 100vw;
+   height: 97vh;
+   scroll-snap-align: center;
+   position: relative;
+   overflow-y: scroll;
+ }
+
+ @media only screen and (min-width: 768px) {
+  .section {
+    height: 94vh;
+    min-width: 33vw;
+    width: 33vw;
+  }
+ }
+
+.event-container {
+  min-height: 5rem;
+}
+
+.assignee-checkbox:not(:checked) + .assignee-frame {
+  display: none;
+}
+
+.container-checkbox:not(:checked) + .container-content {
+  display: none;
+}
+
+.assignee-container {
+  position: relative;
+}
+
+.assignee-container .assignee-dropdown {
+  padding: 8px 0;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.event-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.event-status-changed {
+  animation-name: border-fade;
+  animation-duration: 4s;
+  border-style: solid;
+}
+
+@keyframes border-fade {
+  from {
+    background-color: lightblue;
+  }
+  to {
+    background-color: white;
+  }
+}

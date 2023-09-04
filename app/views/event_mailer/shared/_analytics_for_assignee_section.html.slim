@@ -1,0 +1,14 @@
+.section
+  .section-title Analytics
+  .divider
+  - if @occurences_present
+    span> Total occurrences:
+    span.font-weight-bold = @event.occurrence_count
+  - if @occurrences_today
+    .new_line
+      span> Occurrences today:
+      span.font-weight-bold = @event.occurrences_today_count
+  - if @assigned_in_project
+    .new_line
+      span> Assigned events on you in project:
+      span.font-weight-bold = @assignee.assigns_count_in_project(@event.project_id)

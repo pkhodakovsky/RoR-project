@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --wild-sand: #F6F6F6;
+  --baltic-sea: #282828;
+  --java: #1DB1D9;
+  --silver-chalice: #A0A0A0;
+}
+
+body {
+  color: #282828;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+pre {
+  margin: 0;
+  padding: 3px 5px;
+}
+
+.text-white { color: white; }
+
+.wrapper { background: #F6F6F6; }
+
+.rounded { border-radius: 50%; }
+
+.main-container {
+  margin: auto;
+  padding: 55px 0;
+  width: 790px;
+}
+
+.logo-wrapper {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.top-image {
+  width: 150px;
+  height: 150px;
+}
+
+.high-frequency-image {
+  width: 120px;
+  height: 150px;
+}
+
+.header {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
+}
+
+.project-container {
+  position: relative;
+  border-radius: .25rem;
+  padding: 10px 20px;
+  font-size: 26px;
+  font-style: italic;
+  margin: auto;
+  text-align: center;
+  background: #1DB1D9;
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 0 5px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.divider {
+  border-bottom: 2px solid #1DB1D9;
+  opacity: 0.6;
+  margin: 3px 0;
+}
+
+.view-on-bugno {
+  position: absolute;
+  font-size: 12px;
+  bottom: 10px;
+  right: 10px;
+  color: #A0A0A0;
+}
+
+.code-snippet {
+  font-size: 13px;
+  padding: 10px 0;
+}
+
+.code-snippet-main-line {
+  background: #1DB1D9;
+}
+
+.backtrace { font-size: 12px; }
+
+.traceline { padding: 1px 0; }
+
+.link {
+  color: #282828;
+  text-decoration: none;
+}
+
+.font-weight-bold { font-weight: 600 !important; }

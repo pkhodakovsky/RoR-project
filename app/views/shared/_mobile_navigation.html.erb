@@ -1,0 +1,17 @@
+<%= label_tag :projects, class: 'fixed h-14 bottom-8 right-8 z-20 flex container-label' do %>
+  <div class="rounded-full bg-gray-100 shadow w-14 p-2 cursor-pointer">
+    <%= image_tag 'logo.svg' %>
+  </div>
+<% end %>
+<%= check_box_tag :projects, :projects, false, class: 'hidden container-checkbox' %>
+<div class="fixed inset-0 bg-white z-10 navigation flex flex-col justify-between text-center container-content overflow-y-auto">
+  <div>
+    <%= render 'shared/management' if @project %>
+    <div class="border-2 border-b"></div>
+    <%= turbo_frame_tag 'projects', loading: :lazy, src: mobile_projects_path %>
+    <div class="border-2 border-b"></div>
+    <%= link_to 'Help', helps_path, class: 'py-2 block md:inline-block px-4 rounded mt-2' %>
+    <%= link_to 'Contact', "mailto:#{Rails.application.credentials.contact_email}?subject = Bugno", class: 'py-2 block md:inline-block px-4 rounded mt-2' %>
+    <%= link_to 'Exit', destroy_user_session_path, class: 'py-2 font-bold block md:inline-block px-4 rounded mt-2' %>
+  </div>
+</div>

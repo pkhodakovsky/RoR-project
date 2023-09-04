@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bugno</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, user-scalable=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <% if current_user %>
+      <div class="md:hidden">
+        <%= render 'shared/mobile_navigation'%>
+      </div>
+      <div class="hidden md:block sticky top-0">
+        <%= render 'shared/navigation'%>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
